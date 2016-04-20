@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<center>
+	
+<!--TITLE AND BREIF DESCRIPTION-->
+<h2>Javascript Interest only calculator.</h2>
+Calculate the interest you would pay on borrowing a sum of money.
+<br>
+
+<!--OUTPUT OF LOAN CALCULATION-->
+<h3 id="payment"></h3><br>
+
+<!--AMOUNT TO BORROW TEXT BOX-->
+Amount you wish to borrow: ($) 
+<input type="number" id="loanamount" onchange="computeLoan()"><br><br>
+	
+<!--INTEREST RATE TEXT BOX-->
+Interest rate: (%)  
+<input type="number" id="interestamount" min="0" max="100" value="10" step=".1" onchange="computeLoan()"><br><br>
+	
+<!--LENGTH OF THE LOAN TEXT BOX-->	
+Length of loan: (months) <input type="number" id="loanlength" min="1" max="72" value="1" step="1" onchange="computeLoan()"><br><br>
+<input type="submit" id="button1" value="Submit">
+	
+<!--JAVASCRIPT SOURCE-->	
+<script src="script.js"></script>
+
+	
+</center>
+</body>
+</html>
