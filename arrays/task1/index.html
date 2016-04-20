@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<center>
+<br>
+	
+<input type="text" id="input1"><br><br>
+<input type="text" id="input2"><br><br>
+<input type="text" id="input3"><br><br>
+
+<input type="submit" id="button1" value="Submit">
+	
+<p id="arrayoutput"></p>
+	
+<script>
+	
+//EVENT LISTENER 
+var event1 = document.getElementById("button1");
+    event1.addEventListener('click',submitarray,false);
+   
+//NEW FUNCTION 
+function submitarray() {
+	
+// ARRAY STORING, INPUT 1,2,3 
+	var ray = [document.getElementById("input1").value, document.getElementById("input2").value, document.getElementById("input3").value];
+	
+//SEND THE OUTPUT OF THE CONTENTS OF THE ARRAY ( RAY 0,1,2) TO THE DOM
+	document.getElementById("arrayoutput").innerHTML = ray[0] + " " + ray[1] + " " + ray[2];
+	
+} // END OF FUNCTION
+</script>
+
+</center>
+</body>
+</html>

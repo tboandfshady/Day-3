@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+<center>
+<br>
+
+<!--BUTTON TO SUBMIT USERINPUT-->
+<input type="submit" id="button1" value="remove from the begining">
+<input type="submit" id="button2" value="remove from the end">
+
+<!--DISPLAY SCRIPT OUTPUT TO DOM-->
+<p id="arrayoutput"></p>
+
+<script>
+//EVENT LISENER
+var event1 = document.getElementById("button1");
+    event1.addEventListener('click',removefirst,false);
+var event2 = document.getElementById("button2");
+    event2.addEventListener('click',removelast,false);
+	
+//ARRAY (variable with mutple values)
+var ray = [" Pineapple", " Kiwi", " Lemon", " Cherry", " Rasberry", " Lime", " Banana", " Orange", " Apple", " Mango"]
+
+// SEND ARRAY OUTPUT TO DOM
+document.getElementById("arrayoutput").innerHTML = ray;
+
+//USE POP FUNCTION TO REMOVE FROM THE END OF THE ARRAY
+	function removelast() {
+    ray.pop();
+    document.getElementById("arrayoutput").innerHTML = ray;
+}
+	
+// USE SHIFT FUNCTION TO REMOVE THE FIRST FROM THE ARRAY
+	function removefirst() {
+    ray.shift();
+    document.getElementById("arrayoutput").innerHTML = ray;
+}
+	
+</script>
+</center>
+</body>
+</html>

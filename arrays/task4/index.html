@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+<center>
+<br>
+
+<!--TITLE-->
+<h2>Add to a specific index point in the array!</h2><br>
+
+<!--BUTTON TO SUBMIT USERINPUT-->
+<input type="submit" id="button1" value="Add a fruit to index point">
+
+<!--DISPLAY SCRIPT OUTPUT TO DOM-->
+<p id="arrayoutput"></p>
+<script>
+
+//EVENT LISENER
+var event1 = document.getElementById("button1");
+    event1.addEventListener('click',submitarray,false);
+	
+//ARRAY (variable with mutple values)
+var ray = ["Banana", "Orange", "Apple", "Mango"]
+
+// SEND ARRAY OUTPUT TO DOM
+document.getElementById("arrayoutput").innerHTML = ray;
+
+//FUNCTION PUSHES USER INPUT TO THE END OF THE ARRAY	
+function submitarray() {
+    ray.push(document.getElementById("input1").value);
+    document.getElementById("arrayoutput").innerHTML = ray;
+}
+
+// LINES BELOW USED TO FIND INDEX POINT?! MAYBE USEFUL
+// var valueAtIndex1 = myValues[1];
+
+	
+</script>
+</center>
+</body>
+</html>
